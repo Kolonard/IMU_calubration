@@ -19,15 +19,16 @@ SYNC = b'\xAA\x55'
 FRAME_SIZE  = 32
 #FRAME_SIZE += 2 # 32+2
 
-def crc16(data):
-    crc = 0xFFFF
+def crc16_ccitt(data, poly=0x1021, init=0xFFFF):
+    crc = init
     for b in data:
-        crc ^= b
+        crc ^= (b << 8)
         for _ in range(8):
-            if crc & 1:
-                crc = (crc >> 1) ^ 0xA001
+            if crc & 0x8000:
+                crc = (crc << 1) ^ poly
             else:
-                crc >>= 1
+                crc <<= 1
+            crc &= 0xFFFF
     return crc
 
 # закомментировать при реальном подключении
@@ -51,11 +52,14 @@ with open("bindata/IMU500_static.bin", "rb") as f:
         TC      = struct.unpack('<h', payload[26:28])[0]
         Counter = payload[28] # беззнаковое
         Status  = payload[29] # беззнаковое
-        CRC     = struct.unpack('<H', payload[29:31])[0]
-        checkCRC = crc16(payload[:-2]) # все кроме CRC
+        CRC     = struct.unpack('>H', payload[30:32])[0]
 
+        CRC2    = struct.unpack('<H', payload[30:32])[0]
 
-        print(f"[{header}] | [{Gx:.3f}] [{Gy:.3f}] [{Gz:.3f}] | [{Ax:.3f}] [{Ay:.3f}] [{Az:.3f}] | [{TC}] | [{Counter}] [{Status}] | [{CRC}]  ")
+        checkCRC = crc16_ccitt(payload[2:-2]) # все кроме CRC
+        if CRC == checkCRC: CRC_STATUS = 1
+        else: CRC_STATUS = 0
+        print(f"[{header}] | [{Gx:6d}] [{Gy:6d}] [{Gz:6d}] | [{Ax:6d}] [{Ay:6d}] [{Az:6d}] | [{TC:6d}] | [{Counter:4d}] [{Status:3d}] | [{CRC:6d}]  | [{CRC_STATUS:1d}]")
 
 
 
