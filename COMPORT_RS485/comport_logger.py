@@ -52,9 +52,7 @@ with open("bindata/IMU500_static.bin", "rb") as f:
         TC      = struct.unpack('<h', payload[26:28])[0]
         Counter = payload[28] # беззнаковое
         Status  = payload[29] # беззнаковое
-        CRC     = struct.unpack('>H', payload[30:32])[0]
-
-        CRC2    = struct.unpack('<H', payload[30:32])[0]
+        CRC     = struct.unpack('<H', payload[30:32])[0]
 
         checkCRC = crc16_ccitt(payload[2:-2]) # все кроме CRC
         if CRC == checkCRC: CRC_STATUS = 1
