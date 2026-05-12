@@ -1,0 +1,445 @@
+C:\Users\win11rcv\Desktop\multicast>python tcp_adapter.py --bench-host 192.168.56.102 --retry
+14:20:20.800  tcp_adapter запущен  [threading mode]
+14:20:20.801    стенд:  192.168.56.102:55200  (TCP данные)
+14:20:20.802    вывод:  data_tcp.bin
+14:20:20.802    sync:   192.168.56.102:55100  (UDP метки)
+14:20:20.802  Sync-генератор: 2000 Гц → 192.168.56.102:55100
+14:20:20.808  TCP: подключение к 192.168.56.102:55200...
+14:20:20.816  TCP: подключено к 192.168.56.102:55200
+14:20:20.836  Работаем. Ctrl+C для остановки.
+14:20:25.826  Rate: 2001 pkt/s | Total: 10070 | Loss: 0 | CRC err: 0 | Sync: 100.0%
+14:20:30.836  Rate: 2001 pkt/s | Total: 20090 | Loss: 0 | CRC err: 0 | Sync: 100.0%
+14:20:35.844  Rate: 2004 pkt/s | Total: 30107 | Loss: 0 | CRC err: 0 | Sync: 100.0%
+14:20:40.847  Rate: 2001 pkt/s | Total: 40106 | Loss: 0 | CRC err: 0 | Sync: 100.0%
+14:20:45.853  Rate: 2005 pkt/s | Total: 50118 | Loss: 0 | CRC err: 0 | Sync: 100.0%
+14:20:50.858  Rate: 2003 pkt/s | Total: 60132 | Loss: 0 | CRC err: 0 | Sync: 100.0%
+14:20:55.860  Rate: 2001 pkt/s | Total: 70135 | Loss: 0 | CRC err: 0 | Sync: 100.0%
+14:21:00.863  Rate: 2002 pkt/s | Total: 80140 | Loss: 0 | CRC err: 0 | Sync: 100.0%
+14:21:05.871  Rate: 2000 pkt/s | Total: 90149 | Loss: 0 | CRC err: 0 | Sync: 100.0%
+14:21:10.873  Rate: 2000 pkt/s | Total: 100156 | Loss: 0 | CRC err: 0 | Sync: 100.0%
+14:21:15.883  Rate: 2001 pkt/s | Total: 110178 | Loss: 0 | CRC err: 0 | Sync: 100.0%
+14:21:20.884  Rate: 2003 pkt/s | Total: 120174 | Loss: 0 | CRC err: 0 | Sync: 100.0%
+14:21:25.896  Rate: 1999 pkt/s | Total: 130199 | Loss: 0 | CRC err: 0 | Sync: 100.0%
+14:21:30.897  Rate: 2000 pkt/s | Total: 140198 | Loss: 0 | CRC err: 0 | Sync: 100.0%
+14:21:35.898  Rate: 2002 pkt/s | Total: 150201 | Loss: 0 | CRC err: 0 | Sync: 100.0%
+14:21:40.906  Rate: 2001 pkt/s | Total: 160217 | Loss: 0 | CRC err: 0 | Sync: 100.0%
+14:21:45.909  Rate: 2002 pkt/s | Total: 170223 | Loss: 0 | CRC err: 0 | Sync: 100.0%
+14:21:50.916  Rate: 2000 pkt/s | Total: 180239 | Loss: 0 | CRC err: 0 | Sync: 100.0%
+14:21:55.918  Rate: 2001 pkt/s | Total: 190240 | Loss: 0 | CRC err: 0 | Sync: 100.0%
+14:22:00.921  Rate: 1999 pkt/s | Total: 200246 | Loss: 0 | CRC err: 0 | Sync: 100.0%
+14:22:05.925  Rate: 2003 pkt/s | Total: 210253 | Loss: 0 | CRC err: 0 | Sync: 100.0%
+14:22:10.928  Rate: 2001 pkt/s | Total: 220264 | Loss: 0 | CRC err: 0 | Sync: 99.7%
+14:22:15.938  Rate: 2002 pkt/s | Total: 230275 | Loss: 0 | CRC err: 0 | Sync: 99.6%
+14:22:20.944  Rate: 2000 pkt/s | Total: 240291 | Loss: 0 | CRC err: 0 | Sync: 99.2%
+14:22:25.946  Rate: 2002 pkt/s | Total: 250291 | Loss: 0 | CRC err: 0 | Sync: 99.2%
+14:22:30.954  Rate: 2000 pkt/s | Total: 260304 | Loss: 0 | CRC err: 0 | Sync: 99.1%
+14:22:35.959  Rate: 1995 pkt/s | Total: 270310 | Loss: 0 | CRC err: 0 | Sync: 99.1%
+14:22:40.963  Rate: 2001 pkt/s | Total: 280314 | Loss: 0 | CRC err: 0 | Sync: 99.1%
+14:22:45.968  Rate: 1995 pkt/s | Total: 290307 | Loss: 0 | CRC err: 0 | Sync: 99.1%
+14:22:50.979  Rate: 1998 pkt/s | Total: 300334 | Loss: 0 | CRC err: 0 | Sync: 99.2%
+14:22:55.989  Rate: 2000 pkt/s | Total: 310358 | Loss: 0 | CRC err: 0 | Sync: 99.2%
+14:23:00.990  Rate: 2000 pkt/s | Total: 320354 | Loss: 0 | CRC err: 0 | Sync: 99.2%
+14:23:06.002  Rate: 2000 pkt/s | Total: 330379 | Loss: 0 | CRC err: 0 | Sync: 99.2%
+14:23:11.009  Rate: 2003 pkt/s | Total: 340394 | Loss: 0 | CRC err: 0 | Sync: 99.3%
+14:23:16.014  Rate: 2002 pkt/s | Total: 350404 | Loss: 0 | CRC err: 0 | Sync: 99.3%
+14:23:21.021  Rate: 2000 pkt/s | Total: 360416 | Loss: 0 | CRC err: 0 | Sync: 99.3%
+14:23:26.028  Rate: 2001 pkt/s | Total: 370424 | Loss: 0 | CRC err: 0 | Sync: 99.3%
+14:23:31.033  Rate: 2000 pkt/s | Total: 380441 | Loss: 0 | CRC err: 0 | Sync: 99.3%
+14:23:36.040  Rate: 2001 pkt/s | Total: 390452 | Loss: 0 | CRC err: 0 | Sync: 99.3%
+14:23:41.045  Rate: 1999 pkt/s | Total: 400460 | Loss: 0 | CRC err: 0 | Sync: 99.4%
+14:23:46.049  Rate: 2001 pkt/s | Total: 410465 | Loss: 0 | CRC err: 0 | Sync: 99.4%
+14:23:51.059  Rate: 2001 pkt/s | Total: 420482 | Loss: 0 | CRC err: 0 | Sync: 99.4%
+14:23:56.063  Rate: 2000 pkt/s | Total: 430495 | Loss: 0 | CRC err: 0 | Sync: 99.4%
+14:24:01.074  Rate: 2000 pkt/s | Total: 440510 | Loss: 61 | CRC err: 0 | Sync: 99.4%
+14:24:06.079  Rate: 2000 pkt/s | Total: 450523 | Loss: 61 | CRC err: 0 | Sync: 99.4%
+14:24:11.083  Rate: 2000 pkt/s | Total: 460526 | Loss: 61 | CRC err: 0 | Sync: 99.4%
+14:24:16.091  Rate: 2000 pkt/s | Total: 470546 | Loss: 61 | CRC err: 0 | Sync: 99.5%
+14:24:21.099  Rate: 2000 pkt/s | Total: 480560 | Loss: 61 | CRC err: 0 | Sync: 99.5%
+14:24:26.102  Rate: 2000 pkt/s | Total: 490570 | Loss: 61 | CRC err: 0 | Sync: 99.5%
+14:24:31.107  Rate: 2001 pkt/s | Total: 500579 | Loss: 61 | CRC err: 0 | Sync: 99.5%
+14:24:36.111  Rate: 2002 pkt/s | Total: 510585 | Loss: 61 | CRC err: 0 | Sync: 99.5%
+14:24:41.113  Rate: 2001 pkt/s | Total: 520584 | Loss: 61 | CRC err: 0 | Sync: 99.5%
+14:24:46.127  Rate: 2000 pkt/s | Total: 530612 | Loss: 61 | CRC err: 0 | Sync: 99.5%
+14:24:51.130  Rate: 2001 pkt/s | Total: 540613 | Loss: 61 | CRC err: 0 | Sync: 99.5%
+14:24:56.132  Rate: 2000 pkt/s | Total: 550622 | Loss: 61 | CRC err: 0 | Sync: 99.5%
+14:25:01.138  Rate: 2000 pkt/s | Total: 560635 | Loss: 61 | CRC err: 0 | Sync: 99.5%
+14:25:06.144  Rate: 2000 pkt/s | Total: 570645 | Loss: 61 | CRC err: 0 | Sync: 99.6%
+14:25:11.150  Rate: 2000 pkt/s | Total: 580650 | Loss: 61 | CRC err: 0 | Sync: 99.6%
+14:25:16.154  Rate: 2000 pkt/s | Total: 590664 | Loss: 61 | CRC err: 0 | Sync: 99.6%
+14:25:21.157  Rate: 2001 pkt/s | Total: 600672 | Loss: 61 | CRC err: 0 | Sync: 99.6%
+14:25:26.163  Rate: 2000 pkt/s | Total: 610684 | Loss: 61 | CRC err: 0 | Sync: 99.6%
+14:25:31.172  Rate: 2000 pkt/s | Total: 620695 | Loss: 61 | CRC err: 0 | Sync: 99.6%
+14:25:36.179  Rate: 2001 pkt/s | Total: 630713 | Loss: 61 | CRC err: 0 | Sync: 99.6%
+14:25:41.181  Rate: 2001 pkt/s | Total: 640721 | Loss: 61 | CRC err: 0 | Sync: 99.6%
+14:25:46.186  Rate: 2002 pkt/s | Total: 650732 | Loss: 61 | CRC err: 0 | Sync: 99.6%
+14:25:51.187  Rate: 2001 pkt/s | Total: 660734 | Loss: 61 | CRC err: 0 | Sync: 99.6%
+14:25:56.191  Rate: 2000 pkt/s | Total: 670737 | Loss: 61 | CRC err: 0 | Sync: 99.6%
+14:26:01.198  Rate: 2000 pkt/s | Total: 680749 | Loss: 61 | CRC err: 0 | Sync: 99.6%
+14:26:06.201  Rate: 2000 pkt/s | Total: 690753 | Loss: 61 | CRC err: 0 | Sync: 99.6%
+14:26:11.206  Rate: 2001 pkt/s | Total: 700765 | Loss: 61 | CRC err: 0 | Sync: 99.6%
+14:26:16.212  Rate: 2002 pkt/s | Total: 710777 | Loss: 61 | CRC err: 0 | Sync: 99.6%
+14:26:21.220  Rate: 1999 pkt/s | Total: 720794 | Loss: 61 | CRC err: 0 | Sync: 99.6%
+14:26:26.232  Rate: 2001 pkt/s | Total: 730817 | Loss: 61 | CRC err: 0 | Sync: 99.6%
+14:26:31.242  Rate: 2000 pkt/s | Total: 740835 | Loss: 61 | CRC err: 0 | Sync: 99.7%
+14:26:36.245  Rate: 2001 pkt/s | Total: 750848 | Loss: 61 | CRC err: 0 | Sync: 99.7%
+14:26:41.256  Rate: 2001 pkt/s | Total: 760864 | Loss: 61 | CRC err: 0 | Sync: 99.7%
+14:26:46.260  Rate: 2000 pkt/s | Total: 770873 | Loss: 61 | CRC err: 0 | Sync: 99.7%
+14:26:51.265  Rate: 2000 pkt/s | Total: 780880 | Loss: 61 | CRC err: 0 | Sync: 99.7%
+14:26:56.269  Rate: 2000 pkt/s | Total: 790888 | Loss: 61 | CRC err: 0 | Sync: 99.7%
+14:27:01.272  Rate: 2002 pkt/s | Total: 800895 | Loss: 61 | CRC err: 0 | Sync: 99.7%
+14:27:06.277  Rate: 2001 pkt/s | Total: 810902 | Loss: 61 | CRC err: 0 | Sync: 99.7%
+14:27:11.285  Rate: 2000 pkt/s | Total: 820925 | Loss: 61 | CRC err: 0 | Sync: 99.7%
+14:27:16.299  Rate: 2000 pkt/s | Total: 830951 | Loss: 61 | CRC err: 0 | Sync: 99.7%
+14:27:21.309  Rate: 2001 pkt/s | Total: 840972 | Loss: 61 | CRC err: 0 | Sync: 99.7%
+14:27:26.314  Rate: 2000 pkt/s | Total: 850980 | Loss: 61 | CRC err: 0 | Sync: 99.7%
+14:27:31.318  Rate: 2000 pkt/s | Total: 860988 | Loss: 61 | CRC err: 0 | Sync: 99.7%
+14:27:36.322  Rate: 2003 pkt/s | Total: 870995 | Loss: 61 | CRC err: 0 | Sync: 99.7%
+14:27:41.331  Rate: 2005 pkt/s | Total: 881014 | Loss: 122 | CRC err: 0 | Sync: 99.7%
+14:27:46.335  Rate: 2002 pkt/s | Total: 891022 | Loss: 122 | CRC err: 0 | Sync: 99.7%
+14:27:51.339  Rate: 2000 pkt/s | Total: 901033 | Loss: 122 | CRC err: 0 | Sync: 99.7%
+14:27:56.344  Rate: 2002 pkt/s | Total: 911044 | Loss: 122 | CRC err: 0 | Sync: 99.7%
+14:28:01.346  Rate: 2000 pkt/s | Total: 921044 | Loss: 122 | CRC err: 0 | Sync: 99.7%
+14:28:06.351  Rate: 1999 pkt/s | Total: 931051 | Loss: 122 | CRC err: 0 | Sync: 99.7%
+14:28:11.360  Rate: 2001 pkt/s | Total: 941067 | Loss: 122 | CRC err: 0 | Sync: 99.7%
+14:28:16.369  Rate: 2002 pkt/s | Total: 951089 | Loss: 122 | CRC err: 0 | Sync: 99.7%
+14:28:21.372  Rate: 2000 pkt/s | Total: 961102 | Loss: 122 | CRC err: 0 | Sync: 99.7%
+14:28:26.374  Rate: 2000 pkt/s | Total: 971095 | Loss: 122 | CRC err: 0 | Sync: 99.7%
+14:28:31.386  Rate: 2001 pkt/s | Total: 981126 | Loss: 122 | CRC err: 0 | Sync: 99.7%
+14:28:36.390  Rate: 1999 pkt/s | Total: 991133 | Loss: 122 | CRC err: 0 | Sync: 99.7%
+14:28:41.397  Rate: 2002 pkt/s | Total: 1001147 | Loss: 122 | CRC err: 0 | Sync: 99.7%
+14:28:46.401  Rate: 2002 pkt/s | Total: 1011157 | Loss: 122 | CRC err: 0 | Sync: 99.7%
+14:28:51.405  Rate: 2001 pkt/s | Total: 1021163 | Loss: 122 | CRC err: 0 | Sync: 99.7%
+14:28:56.411  Rate: 2002 pkt/s | Total: 1031174 | Loss: 122 | CRC err: 0 | Sync: 99.7%
+14:29:01.417  Rate: 2003 pkt/s | Total: 1041188 | Loss: 122 | CRC err: 0 | Sync: 99.7%
+14:29:06.427  Rate: 2001 pkt/s | Total: 1051204 | Loss: 122 | CRC err: 0 | Sync: 99.7%
+14:29:11.433  Rate: 2002 pkt/s | Total: 1061216 | Loss: 122 | CRC err: 0 | Sync: 99.7%
+14:29:16.438  Rate: 2001 pkt/s | Total: 1071225 | Loss: 122 | CRC err: 0 | Sync: 99.7%
+14:29:21.439  Rate: 2000 pkt/s | Total: 1081231 | Loss: 122 | CRC err: 0 | Sync: 99.7%
+14:29:26.446  Rate: 2000 pkt/s | Total: 1091242 | Loss: 122 | CRC err: 0 | Sync: 99.8%
+14:29:31.451  Rate: 2000 pkt/s | Total: 1101256 | Loss: 122 | CRC err: 0 | Sync: 99.8%
+14:29:38.823  Rate: 2003 pkt/s | Total: 1115997 | Loss: 122 | CRC err: 0 | Sync: 99.8%
+14:29:43.829  Rate: 2000 pkt/s | Total: 1126003 | Loss: 122 | CRC err: 0 | Sync: 99.8%
+14:29:48.834  Rate: 2000 pkt/s | Total: 1136010 | Loss: 122 | CRC err: 0 | Sync: 99.8%
+14:29:53.844  Rate: 2002 pkt/s | Total: 1146032 | Loss: 122 | CRC err: 0 | Sync: 99.8%
+14:29:58.855  Rate: 2000 pkt/s | Total: 1156051 | Loss: 122 | CRC err: 0 | Sync: 99.8%
+14:30:03.860  Rate: 2001 pkt/s | Total: 1166063 | Loss: 122 | CRC err: 0 | Sync: 99.8%
+14:30:08.865  Rate: 2002 pkt/s | Total: 1176075 | Loss: 122 | CRC err: 0 | Sync: 99.8%
+14:30:13.868  Rate: 2000 pkt/s | Total: 1186083 | Loss: 122 | CRC err: 0 | Sync: 99.8%
+14:30:18.884  Rate: 1999 pkt/s | Total: 1196108 | Loss: 122 | CRC err: 0 | Sync: 99.8%
+14:30:23.891  Rate: 2000 pkt/s | Total: 1206123 | Loss: 122 | CRC err: 0 | Sync: 99.8%
+14:30:28.902  Rate: 2001 pkt/s | Total: 1216146 | Loss: 122 | CRC err: 0 | Sync: 99.8%
+14:30:33.910  Rate: 2001 pkt/s | Total: 1226164 | Loss: 122 | CRC err: 0 | Sync: 99.8%
+14:30:38.925  Rate: 2001 pkt/s | Total: 1236189 | Loss: 122 | CRC err: 0 | Sync: 99.8%
+14:30:43.931  Rate: 2000 pkt/s | Total: 1246205 | Loss: 122 | CRC err: 0 | Sync: 99.8%
+14:30:44.766  Остановка...
+14:30:44.769  Sync-генератор остановлен. Отправлено 1247932 меток.
+14:30:49.771  DiskWriter: файл закрыт.
+14:30:49.772  Итог: пакетов=1247882  потери=122  CRC_err=0  несинхр=0.2%
+
+C:\Users\win11rcv\Desktop\multicast>
+
+
+
+
+[STAT] TCP sent:  328276 | overrun: 46 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 329743 пакетов | Rate: ~10000 pkt/s | Overrun: 46
+s | Overrun: 46
+[STAT] TCP sent:  338278 | overrun: 46 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 339744 пакетов | Rate: ~10000 pkt/s | Overrun: 46
+s | Overrun: 46
+[STAT] TCP sent:  348382 | overrun: 46 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 349745 пакетов | Rate: ~10000 pkt/s | Overrun: 46
+s | Overrun: 46
+[STAT] TCP sent:  358380 | overrun: 47 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 359741 пакетов | Rate: ~10000 pkt/s | Overrun: 47
+s | Overrun: 47
+[STAT] TCP sent:  368381 | overrun: 47 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 369742 пакетов | Rate: ~10000 pkt/s | Overrun: 47
+s | Overrun: 47
+[STAT] TCP sent:  378383 | overrun: 47 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 379743 пакетов | Rate: ~10000 pkt/s | Overrun: 47
+s | Overrun: 47
+[STAT] TCP sent:  388385 | overrun: 47 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 389743 пакетов | Rate: ~10000 pkt/s | Overrun: 47
+s | Overrun: 47
+[STAT] TCP sent:  398489 | overrun: 47 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 399740 пакетов | Rate: ~10000 pkt/s | Overrun: 48
+s | Overrun: 48
+[STAT] TCP sent:  408487 | overrun: 48 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 409740 пакетов | Rate: ~10000 pkt/s | Overrun: 48
+s | Overrun: 48
+[STAT] TCP sent:  418489 | overrun: 48 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 419740 пакетов | Rate: ~10000 pkt/s | Overrun: 48
+s | Overrun: 48
+[STAT] TCP sent:  428491 | overrun: 48 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 429741 пакетов | Rate: ~10000 pkt/s | Overrun: 48
+s | Overrun: 48
+[STAT] TCP sent:  438488 | overrun: 49 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 439737 пакетов | Rate: ~10000 pkt/s | Overrun: 49
+s | Overrun: 49
+[STAT] TCP sent:  448592 | overrun: 49 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 449738 пакетов | Rate: ~10000 pkt/s | Overrun: 49
+s | Overrun: 49
+[STAT] TCP sent:  458594 | overrun: 49 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 459738 пакетов | Rate: ~10000 pkt/s | Overrun: 49
+s | Overrun: 49
+[STAT] TCP sent:  468596 | overrun: 49 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 469739 пакетов | Rate: ~10000 pkt/s | Overrun: 49
+s | Overrun: 49
+[STAT] TCP sent:  478598 | overrun: 49 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 479739 пакетов | Rate: ~10000 pkt/s | Overrun: 49
+s | Overrun: 49
+[STAT] TCP sent:  488600 | overrun: 49 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 489740 пакетов | Rate: ~10000 pkt/s | Overrun: 49
+s | Overrun: 49
+[STAT] TCP sent:  498706 | overrun: 49 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 499740 пакетов | Rate: ~10000 pkt/s | Overrun: 49
+s | Overrun: 49
+[STAT] TCP sent:  508708 | overrun: 49 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 509741 пакетов | Rate: ~10000 pkt/s | Overrun: 49
+s | Overrun: 49
+[STAT] TCP sent:  518705 | overrun: 50 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 519737 пакетов | Rate: ~10000 pkt/s | Overrun: 50
+s | Overrun: 50
+[STAT] TCP sent:  528707 | overrun: 50 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 529737 пакетов | Rate: ~10000 pkt/s | Overrun: 50
+s | Overrun: 50
+[STAT] TCP sent:  538709 | overrun: 50 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 539738 пакетов | Rate: ~10000 pkt/s | Overrun: 50
+s | Overrun: 50
+[STAT] TCP sent:  548813 | overrun: 50 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 549738 пакетов | Rate: ~10000 pkt/s | Overrun: 50
+s | Overrun: 50
+[STAT] TCP sent:  558815 | overrun: 50 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 559738 пакетов | Rate: ~10000 pkt/s | Overrun: 50
+s | Overrun: 50
+[STAT] TCP sent:  568817 | overrun: 50 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 569739 пакетов | Rate: ~10000 pkt/s | Overrun: 50
+s | Overrun: 50
+[STAT] TCP sent:  578819 | overrun: 50 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 579739 пакетов | Rate: ~10000 pkt/s | Overrun: 50
+s | Overrun: 50
+[STAT] TCP sent:  588821 | overrun: 50 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 589740 пакетов | Rate: ~10000 pkt/s | Overrun: 50
+s | Overrun: 50
+[STAT] TCP sent:  598925 | overrun: 50 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 599741 пакетов | Rate: ~10000 pkt/s | Overrun: 50
+s | Overrun: 50
+[STAT] TCP sent:  608927 | overrun: 50 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 609741 пакетов | Rate: ~10000 pkt/s | Overrun: 50
+s | Overrun: 50
+[STAT] TCP sent:  618929 | overrun: 50 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 619742 пакетов | Rate: ~10000 pkt/s | Overrun: 50
+s | Overrun: 50
+[STAT] TCP sent:  628931 | overrun: 50 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 629743 пакетов | Rate: ~10000 pkt/s | Overrun: 50
+s | Overrun: 50
+[STAT] TCP sent:  638933 | overrun: 50 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 639743 пакетов | Rate: ~10000 pkt/s | Overrun: 50
+s | Overrun: 50
+[STAT] TCP sent:  649037 | overrun: 50 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 649744 пакетов | Rate: ~10000 pkt/s | Overrun: 50
+s | Overrun: 50
+[STAT] TCP sent:  659039 | overrun: 50 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 659744 пакетов | Rate: ~10000 pkt/s | Overrun: 50
+s | Overrun: 50
+[STAT] TCP sent:  669035 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 669739 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  679037 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 679740 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  689039 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 689741 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  699144 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 699742 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  709145 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 709742 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  719147 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 719743 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  729149 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 729743 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  739151 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 739744 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  749255 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 749745 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  759257 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 759746 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  769259 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 769747 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  779261 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 779747 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  789263 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 789748 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  799367 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 799748 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  809369 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 809749 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  819371 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 819749 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  829373 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 829749 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  839375 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 839749 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  849479 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 849749 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  859481 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 859750 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  869483 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 869750 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  879485 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 879750 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  889487 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 889750 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  899591 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 899751 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  909593 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 909751 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  919595 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 919752 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  929597 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 929753 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  939598 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 939753 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  949703 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 949754 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  959705 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 959755 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  969707 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 969755 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  979708 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 979755 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  989710 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 989756 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] Отправлено: 999757 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent:  999817 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1009757 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent: 1009818 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1019757 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent: 1019820 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1029758 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent: 1029822 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1039759 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent: 1039824 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1049759 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent: 1049928 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1059759 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent: 1059930 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1069760 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent: 1069932 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1079761 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent: 1079934 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1089761 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent: 1089936 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1099761 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent: 1099940 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1109762 пакетов | Rate: ~10000 pkt/s | Overrun: 51
+s | Overrun: 51
+[STAT] TCP sent: 1109942 | overrun: 51 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1119753 пакетов | Rate: ~10000 pkt/s | Overrun: 53
+s | Overrun: 53
+[STAT] TCP sent: 1119935 | overrun: 53 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1129753 пакетов | Rate: ~10000 pkt/s | Overrun: 53
+s | Overrun: 53
+[STAT] TCP sent: 1129937 | overrun: 53 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1139753 пакетов | Rate: ~10000 pkt/s | Overrun: 53
+s | Overrun: 53
+[STAT] TCP sent: 1139938 | overrun: 53 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1149753 пакетов | Rate: ~10000 pkt/s | Overrun: 53
+s | Overrun: 53
+[STAT] TCP sent: 1150043 | overrun: 53 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1159754 пакетов | Rate: ~10000 pkt/s | Overrun: 53
+s | Overrun: 53
+[STAT] TCP sent: 1160045 | overrun: 53 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1169754 пакетов | Rate: ~10000 pkt/s | Overrun: 53
+s | Overrun: 53
+[STAT] TCP sent: 1170047 | overrun: 53 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1179754 пакетов | Rate: ~10000 pkt/s | Overrun: 53
+s | Overrun: 53
+[STAT] TCP sent: 1180048 | overrun: 53 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1189755 пакетов | Rate: ~10000 pkt/s | Overrun: 53
+s | Overrun: 53
+[STAT] TCP sent: 1190050 | overrun: 53 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1199755 пакетов | Rate: ~10000 pkt/s | Overrun: 53
+s | Overrun: 53
+[STAT] TCP sent: 1200155 | overrun: 53 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1209756 пакетов | Rate: ~10000 pkt/s | Overrun: 53
+s | Overrun: 53
+[STAT] TCP sent: 1210156 | overrun: 53 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1219757 пакетов | Rate: ~10000 pkt/s | Overrun: 53
+s | Overrun: 53
+[STAT] TCP sent: 1220158 | overrun: 53 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1229758 пакетов | Rate: ~10000 pkt/s | Overrun: 53
+s | Overrun: 53
+[STAT] TCP sent: 1230160 | overrun: 53 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1239758 пакетов | Rate: ~10000 pkt/s | Overrun: 53
+s | Overrun: 53
+[STAT] TCP sent: 1240162 | overrun: 53 | UDP sync recv:      0 | sync lost: 0
+[STAT] Отправлено: 1249759 пакетов | Rate: ~10000 pkt/s | Overrun: 53
+s | Overrun: 53
+[STAT] TCP sent: 1250266 | overrun: 53 | UDP sync recv:      0 | sync lost: 0
+[WARN] Соединение разорвано: [WinError 10054] An existing connection was forcibl
+y closed by the remote host
+y the remote host
+[..] Клиент отключился. Ожидание нового подключения...
+ нового подключения...
+ючения...
+...
+
+[STAT] TCP sent: 1257942 | overrun: 53 | UDP sync recv:      0 | sync lost: 0
+[STAT] TCP sent: 1257942 | overrun: 53 | UDP sync recv:      0 | sync lost: 0
+[STAT] TCP sent: 1257942 | overrun: 53 | UDP sync recv:      0 | sync lost: 0
+[STAT] TCP sent: 1257942 | overrun: 53 | UDP sync recv:      0 | sync lost: 0
+[STAT] TCP sent: 1257942 | overrun: 53 | UDP sync recv:      0 | sync lost: 0
+
+[STOP] Остановка...вка......
+[FINAL] Отправлено TCP: 1257942 | Принято UDP sync: 0 | Потеряно sync: 0
+отеряно sync: 0
+ync: 0
+
+C:\Documents and Settings\chicka\Desktop\multicast>
+
+
+
