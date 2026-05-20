@@ -45,7 +45,11 @@ powercfg /change standby-timeout-ac 60
 powercfg /change standby-timeout-dc 60
 ```
 где вместо `60` указать значение в минутах для перехода компьютера в сон
-
+- для проверки задержки можно выполнить команду на клиенте (Windows Vista):
+```
+w32tm /stripchart /computer:192.168.137.132 /samples:20 /dataonly
+```
+изменив предварительно IP на IP NTP сервера
 
 ## Глобально важно
 Чтобы избежать сильной рассинхронизации надо:
