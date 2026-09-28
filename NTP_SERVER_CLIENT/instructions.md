@@ -57,3 +57,23 @@ w32tm /stripchart /computer:192.168.137.132 /samples:20 /dataonly
 - держать Ethernet активным
 - периодически делать resync (интеграция в скрипт была бы кстати)
 
+# Еще раз кратко общая схема
+1. Win10:  ntp_server_stable.bat  → перезагрузка
+2. Vista:  ntp_client_vista_stable.bat  → перезагрузка
+3. Win11:  ntp_client_win11.bat  → перезагрузка
+4. Все:    ntp_resync_setup.bat  (один раз)
+           ↓ подождать 1-2 минуты на синхронизацию
+5. Win11:  check_all.bat 192.168.137.1   ← вот эта проверка
+           ↓ если всё зелёное
+6. Win11:  python imu_logger.py   ← боевой запуск
+           ↓ 60 секунд смотреть Rate/Loss/CRC/Sync
+7. Win11:  python read_imu_log.py data_async.bin --head 50
+
+```check_all.bat 192.168.137.1``` для проверки всех параметров 
+
+## И проверка на каждом ПК (cmd):
+w32tm /query /source
+:: Должно показать IP Win10, не "Local CMOS Clock"
+
+w32tm /stripchart /computer:192.168.137.1 /samples:10 /dataonly
+:: Смотреть колонку offset — должна быть < 10 мс

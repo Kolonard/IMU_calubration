@@ -32,7 +32,7 @@ imu_logger.py
   version     2B  uint16 = 1
   frame_sz    2B  uint16 = 32
   record_sz   2B  uint16 = 58
-  sample_hz   4B  uint32 = 2000
+  sample_hz   4B  uint32 = 200
   wall_epoch  8B  int64   time.time_ns() при старте
   perf_start  8B  uint64  perf_counter_ns() при старте
   reserved    6B  = 0
@@ -65,35 +65,31 @@ except ImportError:
 
 log = logging.getLogger(__name__)
 
-# ══════════════════════════════════════════════════════════════════
-#  НАСТРОЙКИ
-# ══════════════════════════════════════════════════════════════════
-PORT            = "COM3"
-BAUDRATE        = 921600
+PORT            = "/dev/cu.usbserial-A19OWK1H"
+BAUDRATE        = 115200
 
 SYNC_BYTES      = b'\xC0\xC0'
 FRAME_SIZE      = 32
 PACKET_STRUCT   = struct.Struct('<H6ih2BH')   # 32 байта
 
-OUTPUT_FILE     = "data_async.bin"
+OUTPUT_FILE     = "data_async_real_today.bin"
 
-# Буфер записи на диск: сбрасываем при накоплении N записей или каждые T сек
-FLUSH_RECORDS   = 400          # ~0.2 сек при 2кГц
-FLUSH_INTERVAL  = 0.5          # сек
+# Буфер записи на диск
+FLUSH_RECORDS   = 400  # около 0.2 сек при 2кГц
+FLUSH_INTERVAL  = 0.5 # сек
 
-# Максимальное отклонение от sync-метки, при котором пакет считается синхронизированным
-MAX_SYNC_GAP_NS = 5_000_000    # 5 мс (покрывает GIL-jitter на Windows) (3 × период 2кГц)
+# Максимальное отклонение от sync-метки
+MAX_SYNC_GAP_NS = 5_000_000 # 5 мс (покрывает GIL-jitter на Windows)
 
-STAT_INTERVAL   = 5.0          # сек между выводом статистики
-# ══════════════════════════════════════════════════════════════════
+STAT_INTERVAL   = 5.0 # сек между выводом статистики
 
-# ─── Форматы бинарных структур ───────────────────────────────────
-FILE_HEADER_FMT    = struct.Struct('<8sHHHIqQ6x')   # 40 байт → pad до 64
+# Форматы бинарных структур
+FILE_HEADER_FMT    = struct.Struct('<8sHHHIqQ6x')  # 40 байт → pad до 64
 FILE_HEADER_SIZE   = 64
 
 RECORD_HEADER      = b"DREC"
-RECORD_FMT         = struct.Struct('<4sQIqh32s')     # 4+8+4+8+2+32 = 58 байт
-RECORD_SIZE        = RECORD_FMT.size                 # 58
+RECORD_FMT         = struct.Struct('<4sQIqh32s') # 4+8+4+8+2+32 = 58 байт
+RECORD_SIZE        = RECORD_FMT.size # 58
 
 UNSYNC_SEQ         = 0xFFFF_FFFF
 UNSYNC_DELTA       = -32768
@@ -108,11 +104,10 @@ def crc16_ccitt(data: bytes, poly: int = 0x1021, init: int = 0xFFFF) -> int:
     return crc
 
 
-# ══════════════════════════════════════════════════════════════════
 #  Привязка perf_counter к wall-clock
 #  perf_counter_ns используется для точных меток внутри файла,
 #  wall_epoch сохраняется в заголовке для привязки к реальному времени.
-# ══════════════════════════════════════════════════════════════════
+
 
 class WallClock:
     """
@@ -251,7 +246,7 @@ class DiskWriter:
                 1,                          # version
                 FRAME_SIZE,
                 RECORD_SIZE,
-                2000,                       # sample_hz
+                200,                       # sample_hz
                 WALL_CLOCK.wall_epoch_ns,
                 WALL_CLOCK.perf_start_ns,
             )
@@ -416,7 +411,7 @@ async def stat_printer(stats: Stats):
 def read_bin(path: str, max_records: int = 20):
     """
     Читает и выводит первые N записей из .bin файла.
-    Использование: python imu_logger.py --read data_async.bin
+    Использование: python imu_logger.py --read data_async_real_09092026.bin
     """
     Gmult = 1.085069e-6   # рад/с
     Amult = 5e-5          # м/с²

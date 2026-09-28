@@ -1,7 +1,3 @@
-# Скрипт для асинхронной записи потока с COM-port
-# В начале есть проверка чтения по выбранному протоколу из .bin файла, записанного предварительно
-# (Активно используется)
-
 import asyncio
 from socketserver import TCPServer
 from time import gmtime
@@ -12,8 +8,8 @@ import time
 
 from urllib3.response import GzipDecoder
 
-PORT = "COM3"
-BAUDRATE = 921600
+PORT = "/dev/cu.usbserial-A19OWK1H"
+BAUDRATE = 115200
 # BAUDRATE = 115200 # для теста на Arduino UNO (работает, avg Rate: 188 pkt/s, avg Loss: 0
 
 SYNC = b'\xAA\x55'
@@ -40,7 +36,7 @@ with open("bindata/IMU500_static.bin", "rb") as f:
             break
         payload = chunk # остается только здесь для примера
 
-        # распаковка под протокол БЧЭ-500 режимов 2-3
+        # распаковка под протокол
         [header, Gx, Gy, Gz, Ax, Ay, Az, TC, Counter, Status, CRC] = struct.unpack('<H6ih2BH', payload)
         # коэффициенты для удобного отображения
         Gmult = 1.085069*10**(-6) # град/с
@@ -50,13 +46,12 @@ with open("bindata/IMU500_static.bin", "rb") as f:
         checkCRC = crc16_ccitt(payload[2:-2]) # все кроме CRC
         if CRC == checkCRC: CRC_STATUS = 1
         else: CRC_STATUS = 0
+        K_gyro = 1.085069*10**(-6)
+        K_acc = 5*10**(-5)
+        #K_gyro = 1
+        #K_acc = 1
 
-        print(f"[{header}] | [{Gx:6d}] [{Gy:6d}] [{Gz:6d}] | [{Ax:6d}] [{Ay:6d}] [{Az:6d}] | [{TC:6d}] | [{Counter:3d}] [{Status:3d}] | [{CRC:6d}]  | [{CRC_STATUS:1d}]")
-        # вывод с переводом в удобные величины
-        #Gx, Gy, Gz = Gx * Gmult, Gy * Gmult, Gz * Gmult
-        #Ax, Ay, Az = Ax * Amult, Ay * Amult, Az * Gmult
-        #TC *= Tmult
-        #print(f"[{header}] | [{Gx:5.3f} град/с] [{Gy:5.3f} град/с] [{Gz:5.3f} град/с] | [{Ax:5.3f} м/с^2] [{Ay:5.3f} м/с^2] [{Az:5.3f} м/с^2] | [{TC:5.3f} °C] | [{Counter:4d}] [{Status:3d}] | [{CRC:6d}]  | [{CRC_STATUS:1d}]")
+        print(f"[{header}] | [{K_gyro*Gx:6f}] [{K_gyro*Gy:6f}] [{K_gyro*Gz:6f}] | [{K_acc*Ax:6f}] [{K_acc*Ay:6f}] [{K_acc*Az:6f}] | [{TC:6d}] | [{Counter:3d}] [{Status:3d}] | [{CRC:6d}]  | [{CRC_STATUS:1d}]")
 
 class SerialProtocol(asyncio.Protocol): # асинхронный протокол
     def __init__(self, file):
@@ -91,12 +86,8 @@ class SerialProtocol(asyncio.Protocol): # асинхронный протоко�
             payload =     self.buffer[idx:idx + FRAME_SIZE]
             self.buffer = self.buffer[idx + FRAME_SIZE:]
 
-            # распаковка под протокол БЧЭ-500 режимов 2-3
+            # распаковка под протокол  режимов 2-3
             [header, Gx, Gy, Gz, Ax, Ay, Az, TC, Counter, Status, CRC] = struct.unpack('<H6ih2BH', payload)
-            # коэффициенты для удобного отображения
-            Gmult = 1.085069 * 10 ** (-6)  # град/с
-            Amult = 5 * 10 ** (-5)  # м/с^2
-            Tmult = 0.01  # °C
 
             checkCRC = crc16_ccitt(payload[2:-2])  # все кроме CRC
             if CRC == checkCRC:
@@ -105,7 +96,6 @@ class SerialProtocol(asyncio.Protocol): # асинхронный протоко�
                 CRC_STATUS = 0
             return
 """     
-        # Эти проверки актуальны для симуляции COM порта
         if self.prev_counter is not None:
                 if counter != self.prev_counter + 1:
                     self.loss_count += (counter - self.prev_counter - 1)
@@ -147,6 +137,11 @@ async def main():
             PORT,
             baudrate=BAUDRATE
         )
+        K_gyro = 1.085069 * 10 ** (-6)
+        K_acc = 1 * 10 ** (-4)
+
+        print(
+            f"[{header}] | [{K_gyro * Gx:6f}] [{K_gyro * Gy:6f}] [{K_gyro * Gz:6f}] | [{K_acc * Ax:6f}] [{K_acc * Ay:6f}] [{K_acc * Az:6f}] | [{TC:6d}] | [{Counter:3d}] [{Status:3d}] | [{CRC:6d}]  | [{CRC_STATUS:1d}]")
 
         try:
             await asyncio.Future()  # run forever

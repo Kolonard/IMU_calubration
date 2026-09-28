@@ -57,8 +57,8 @@ RECORD_DTYPE = np.dtype([
 # Итого: 4+8+4+8+2+2+4+4+4+4+4+4+2+1+1+2 = 58 байт ✓
 
 # Коэффициенты пересчёта
-GMULT = 1.085069e-6   # LSB → рад/с
-AMULT = 5e-5          # LSB → м/с²
+GMULT = 1.085069e-6   # LSB → град/с
+AMULT = 1e-4          # LSB → м/с²
 TMULT = 0.01          # LSB → °C
 
 
@@ -74,9 +74,9 @@ def read_log(filepath: str | Path) -> pd.DataFrame:
         sync_seq   uint32    номер sync-импульса
         delta_us   int16     отклонение от sync-импульса, мкс
         synced     bool      True если пакет привязан к sync-метке
-        gx_dps     float64   гироскоп X, рад/с
-        gy_dps     float64   гироскоп Y, рад/с
-        gz_dps     float64   гироскоп Z, рад/с
+        gx_dps     float64   гироскоп X, град/с
+        gy_dps     float64   гироскоп Y, град/с
+        gz_dps     float64   гироскоп Z, град/с
         ax_ms2     float64   ускорение X, м/с²
         ay_ms2     float64   ускорение Y, м/с²
         az_ms2     float64   ускорение Z, м/с²
@@ -217,7 +217,7 @@ def _check_crc_vectorized(raw: np.ndarray) -> np.ndarray:
     for i in range(n):
         # Пересобираем данные для CRC из отдельных полей
         data_bytes = struct.pack(
-            "<6iih2B",
+            "<6ih2B",
             int(raw["gx"][i]), int(raw["gy"][i]), int(raw["gz"][i]),
             int(raw["ax"][i]), int(raw["ay"][i]), int(raw["az"][i]),
             int(raw["tc"][i]),
@@ -293,7 +293,7 @@ if __name__ == "__main__":
             axes[0].plot(df["t_s"], df["gz_dps"], "b-", lw=0.5, label="Gz")
             axes[0].plot(df["t_s"], df["gx_dps"], "r-", lw=0.5, alpha=0.7, label="Gx")
             axes[0].plot(df["t_s"], df["gy_dps"], "g-", lw=0.5, alpha=0.7, label="Gy")
-            axes[0].set_ylabel("рад/с")
+            axes[0].set_ylabel("град/с")
             axes[0].legend(loc="upper right", fontsize=8)
             axes[0].set_title("Гироскоп")
 
